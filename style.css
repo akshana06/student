@@ -1,65 +1,56 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  background: #f4f4f9;
   margin: 0;
   padding: 0;
 }
 
 .container {
   width: 400px;
-  margin: 40px auto;
+  margin: 50px auto;
   background: #fff;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
   color: #333;
 }
 
 label {
   display: block;
-  margin-top: 12px;
+  margin-top: 10px;
   font-weight: bold;
-  color: #444;
 }
 
-input, select, textarea {
+input, select {
   width: 100%;
   padding: 8px;
-  margin-top: 6px;
+  margin-top: 5px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  outline: none;
-  font-size: 14px;
-}
-
-.gender {
-  margin-top: 6px;
 }
 
 button {
   width: 100%;
-  margin-top: 18px;
   padding: 10px;
-  background: #4facfe;
-  color: #fff;
-  font-size: 16px;
+  background: #28a745;
+  color: white;
   border: none;
   border-radius: 6px;
+  margin-top: 15px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
-  background: #00c6ff;
+  background: #218838;
 }
 
-#msg {
-  text-align: center;
-  margin-top: 15px;
-  font-weight: bold;
+#output {
+  margin-top: 20px;
+  padding: 10px;
+  background: #e9ecef;
+  border-radius: 6px;
 }
