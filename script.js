@@ -1,30 +1,21 @@
-document.getElementById("regForm").addEventListener("submit", function(event) {
-  event.preventDefault();
+document.getElementById("regForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-  let fullname = document.getElementById("fullname").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let phone = document.getElementById("phone").value.trim();
-  let password = document.getElementById("password").value;
-  let confirm = document.getElementById("confirm").value;
-  let msg = document.getElementById("msg");
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const gender = document.getElementById("gender").value;
+  const dob = document.getElementById("dob").value;
+  const course = document.getElementById("course").value;
 
-  // Validate phone number
-  if (phone.length !== 10 || isNaN(phone)) {
-    msg.textContent = "Phone number must be 10 digits!";
-    msg.style.color = "red";
-    return;
-  }
+  const output = `
+    <h3>Registration Successful 🎉</h3>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Gender:</strong> ${gender}</p>
+    <p><strong>DOB:</strong> ${dob}</p>
+    <p><strong>Course:</strong> ${course}</p>
+  `;
 
-  // Validate password match
-  if (password !== confirm) {
-    msg.textContent = "Passwords do not match!";
-    msg.style.color = "red";
-    return;
-  }
-
-  msg.textContent = "Registration Successful!";
-  msg.style.color = "green";
-
-  // Reset form
-  document.getElementById("regForm").reset();
+  document.getElementById("output").innerHTML = output;
+  this.reset();
 });
